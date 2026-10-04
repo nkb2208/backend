@@ -13,7 +13,7 @@ const HAIR_DB = [
         { title: "Blow-dry", desc: "Use a round brush to blow-dry the ends inwards." },
         { title: "Set", desc: "Use a flat iron to gently curve the very ends inwards for a lasting C-curl." }
       ],
-      videoId: "mD1oA7wO59o",
+      videoId: "0hYR0pMphNw",
       sourceName: "YouTube"
     }
   },
@@ -31,7 +31,7 @@ const HAIR_DB = [
         { title: "Curling", desc: "Use a large barrel curling iron (32mm) away from the face." },
         { title: "Brushing", desc: "Let curls cool, then brush out gently with a wide-tooth comb for soft waves." }
       ],
-      videoId: "1r_2-sV0g3Y",
+      videoId: "rCYm9JwiIp0",
       sourceName: "YouTube"
     }
   },
@@ -49,7 +49,7 @@ const HAIR_DB = [
         { title: "Round Brush", desc: "Blow dry the bangs forward with a round brush, then roll backwards." },
         { title: "Split", desc: "Part in the middle and swoop the sides away from the face." }
       ],
-      videoId: "gJzMlCB0w5k",
+      videoId: "cmz5r4Uk80g",
       sourceName: "YouTube"
     }
   },
@@ -67,7 +67,7 @@ const HAIR_DB = [
         { title: "Blowout", desc: "Blow dry pointing the nozzle downwards to seal the cuticle." },
         { title: "Flat Iron", desc: "Flat iron small sections at a time for maximum sleekness, finish with shine spray." }
       ],
-      videoId: "SlPO2jUYTCM",
+      videoId: "7QVC_DNQzbg",
       sourceName: "YouTube"
     }
   },
@@ -85,7 +85,7 @@ const HAIR_DB = [
         { title: "Waving", desc: "Use a flat iron to create S-waves by bending the iron back and forth." },
         { title: "Mess It Up", desc: "Scrunch the hair with your hands and flip your head upside down for volume." }
       ],
-      videoId: "TCFG61E-Rjk",
+      videoId: "ckNaTRT1ZBA",
       sourceName: "YouTube"
     }
   },
@@ -103,7 +103,7 @@ const HAIR_DB = [
         { title: "Twist", desc: "Twist the ponytail loosely and wrap it around the base." },
         { title: "Pin", desc: "Secure with bobby pins and pull out pieces slightly to add texture." }
       ],
-      videoId: "qD0hlzKasdM",
+      videoId: "sdwM00Lh7Nk",
       sourceName: "YouTube"
     }
   },
@@ -121,7 +121,7 @@ const HAIR_DB = [
         { title: "Flipping", desc: "Blow-dry the top layers away from the face to create wings." },
         { title: "Blending", desc: "Use a large round brush to blend the sections seamlessly." }
       ],
-      videoId: "M-vlGrR4ssI",
+      videoId: "aeAQ7rO3q0k",
       sourceName: "YouTube"
     }
   },
@@ -139,7 +139,7 @@ const HAIR_DB = [
         { title: "Scrunch", desc: "Scrunch upwards to encourage natural curl patterns." },
         { title: "Diffuse", desc: "Use a diffuser on medium heat until 80% dry." }
       ],
-      videoId: "qa2Bkiv-rTg",
+      videoId: "WbVIZTUa4Ws",
       sourceName: "YouTube"
     }
   }
