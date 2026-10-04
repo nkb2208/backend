@@ -91,10 +91,11 @@ const bodySchema = {
 async function analyzeFace(imageMimeType, imageBase64) {
     const catalogStr = `HAIR CATALOG:\n${buildCatalogString(HAIR_DB)}\n\nMAKEUP CATALOG:\n${buildCatalogString(MAKEUP_DB)}`;
     const systemInstruction = `You are an expert beauty consultant. Analyze the user's face photo.
-Select 6-8 hair styles and 6-10 makeup looks from the provided catalogs that suit the user.
+Select 3-5 hair styles and 3-5 makeup looks from the provided catalogs that suit the user.
 If the catalog has fewer items, return as many as match.
 Write a personalized 'whyItSuitsUser' explanation for each recommendation.
 DO NOT invent IDs.
+CRITICAL: Vary your selections. Do not always pick the first matching items. Pick diverse options that still fit.
 CATALOGS:\n${catalogStr}`;
 
     const apiCallFn = async (apiKey) => {
@@ -108,7 +109,7 @@ CATALOGS:\n${catalogStr}`;
                 systemInstruction: systemInstruction,
                 responseMimeType: "application/json",
                 responseSchema: faceSchema,
-                temperature: 0.2
+                temperature: 0.8
             }
         });
         return JSON.parse(response.text);
@@ -120,9 +121,10 @@ CATALOGS:\n${catalogStr}`;
 async function analyzeBody(imageMimeType, imageBase64) {
     const catalogStr = `OUTFIT CATALOG:\n${buildCatalogString(OUTFIT_DB)}`;
     const systemInstruction = `You are an expert fashion stylist. Analyze the user's full body photo.
-Select outfit ideas from the provided catalog that suit the user's proportions.
+Select 3-5 outfit ideas from the provided catalog that suit the user's proportions.
 Write a personalized 'whyItSuitsUser' explanation for each recommendation.
 DO NOT invent IDs.
+CRITICAL: Vary your selections. Do not always pick the first matching items. Pick diverse options that still fit.
 CATALOGS:\n${catalogStr}`;
 
     const apiCallFn = async (apiKey) => {
@@ -136,7 +138,7 @@ CATALOGS:\n${catalogStr}`;
                 systemInstruction: systemInstruction,
                 responseMimeType: "application/json",
                 responseSchema: bodySchema,
-                temperature: 0.2
+                temperature: 0.8
             }
         });
         return JSON.parse(response.text);
@@ -214,7 +216,7 @@ CATALOGS:\n${catalogStr}`;
                 systemInstruction: systemInstruction,
                 responseMimeType: "application/json",
                 responseSchema: skincareSchema,
-                temperature: 0.2
+                temperature: 0.8
             }
         });
         return JSON.parse(response.text);
