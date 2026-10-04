@@ -1,4 +1,4 @@
-const express = require('express');
+﻿const express = require('express');
 const cors = require('cors');
 const multer = require('multer');
 const aiService = require('./services/aiService');
@@ -9,6 +9,9 @@ const port = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
+
+// Health check for Railway deployment
+app.get('/api/health', (req, res) => res.json({ status: 'ok', message: 'LUMI Backend is running on Railway' }));
 
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
@@ -113,3 +116,4 @@ app.post('/api/analyze/wardrobe', upload.array('images', 10), async (req, res) =
 app.listen(port, () => {
     console.log(`Backend server running at http://localhost:${port}`);
 });
+
