@@ -11,6 +11,11 @@ app.use(cors());
 app.use(express.json());
 
 // Health check for Railway deployment
+app.get('/api/explore', (req, res) => {
+    const exploreDB = require('./content/exploreDB');
+    res.json(exploreDB);
+});
+
 app.get('/api/health', (req, res) => res.json({ status: 'ok', message: 'LUMI Backend is running on Railway' }));
 
 const storage = multer.memoryStorage();
