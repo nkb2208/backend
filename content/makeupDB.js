@@ -26,7 +26,7 @@ const MAKEUP_DB = [
           "desc": "Finish with a hydrating lip oil or sheer gloss."
         }
       ],
-      "videoId": "y46hvE9JAXo",
+      "videoId": "Hkr5hoZpQ_8",
       "sourceName": "YouTube",
       "products": [
         {
@@ -67,7 +67,7 @@ const MAKEUP_DB = [
           "desc": "Apply lip tint in the center of the lips and blend outwards."
         }
       ],
-      "videoId": "wE08NnJzC_8",
+      "videoId": "ze-xsMlI5I4",
       "sourceName": "YouTube",
       "products": [
         {
@@ -108,7 +108,7 @@ const MAKEUP_DB = [
           "desc": "Use a coral lipstick or tint to tie the look together."
         }
       ],
-      "videoId": "Zq1fFv0f2Y4",
+      "videoId": "IZ7xBvqiXsI",
       "sourceName": "YouTube",
       "products": [
         {
@@ -149,7 +149,7 @@ const MAKEUP_DB = [
           "desc": "Brush brows up with a clear brow gel for a laminated effect."
         }
       ],
-      "videoId": "oF0c5q_qC0c",
+      "videoId": "P3UJj3Dm7ao",
       "sourceName": "YouTube",
       "products": [
         {
@@ -190,7 +190,7 @@ const MAKEUP_DB = [
           "desc": "Apply volumizing mascara or individual falsies to the outer corners."
         }
       ],
-      "videoId": "1r_2-sV0g3Y",
+      "videoId": "G8hRmKDqJo4",
       "sourceName": "YouTube",
       "products": [
         {
@@ -231,7 +231,7 @@ const MAKEUP_DB = [
           "desc": "Create a soft cut crease using neutral brown shades and add a subtle shimmer on the lid."
         }
       ],
-      "videoId": "b5D3n4fV7yA",
+      "videoId": "A_SVwR4a8FU",
       "sourceName": "YouTube",
       "products": [
         {
@@ -272,7 +272,7 @@ const MAKEUP_DB = [
           "desc": "Use a brown lip liner with a nude lipstick."
         }
       ],
-      "videoId": "3GE20RX6Nw0",
+      "videoId": "1usDj5WGmbI",
       "sourceName": "YouTube",
       "products": [
         {
@@ -313,7 +313,7 @@ const MAKEUP_DB = [
           "desc": "Outline lips carefully with red liner, then fill in with a long-lasting matte red lipstick."
         }
       ],
-      "videoId": "dQw4w9WgXcQ",
+      "videoId": "aipwyIoE1Qc",
       "sourceName": "YouTube",
       "products": [
         {
@@ -323,6 +323,192 @@ const MAKEUP_DB = [
         {
           "name": "Son môi",
           "purchaseLink": "https://shopee.vn/search?keyword=son%20moi"
+        }
+      ]
+    }
+  }
+,
+    {
+    "id": "makeup_009",
+    "name": "Igari Makeup (Drunk Blush)",
+    "category": "makeup",
+    "description": "A Japanese makeup style focusing on blush placed high on the cheeks and right under the eyes.",
+    "tags": [
+      "cute",
+      "blush",
+      "spring"
+    ],
+    "primaryImage": "https://i.pinimg.com/736x/46/e2/c6/46e2c61d7f47c3ecea04c5ce80058e16.jpg",
+    "fallbackImage": "https://i.pinimg.com/736x/46/e2/c6/46e2c61d7f47c3ecea04c5ce80058e16.jpg",
+    "tutorial": {
+      "steps": [
+        {
+          "title": "Base",
+          "desc": "Create a flawless, dewy base."
+        },
+        {
+          "title": "Blush",
+          "desc": "Apply pink or peach blush right under the eyes and across the nose bridge."
+        },
+        {
+          "title": "Lips",
+          "desc": "Finish with a sheer, glossy lip tint."
+        }
+      ],
+      "videoId": "LT_nol0NOfc",
+      "sourceName": "YouTube",
+      "products": [
+        {
+          "name": "Cream Blush",
+          "purchaseLink": "https://shopee.vn/search?keyword=cream%20blush"
+        }
+      ]
+    }
+  },
+  {
+    "id": "makeup_010",
+    "name": "Smokey Siren Eyes",
+    "category": "makeup",
+    "description": "Elongated, dark, and sultry eye makeup to give a mysterious vibe.",
+    "tags": [
+      "evening",
+      "bold",
+      "siren"
+    ],
+    "primaryImage": "https://i.pinimg.com/736x/5c/49/68/5c496812dbcead069fefb059adac2030.jpg",
+    "fallbackImage": "https://i.pinimg.com/736x/5c/49/68/5c496812dbcead069fefb059adac2030.jpg",
+    "tutorial": {
+      "steps": [
+        {
+          "title": "Shadow",
+          "desc": "Apply dark brown shadow focusing on the outer V and elongating it."
+        },
+        {
+          "title": "Liner",
+          "desc": "Draw a sharp inner corner point and a stretched outer wing."
+        },
+        {
+          "title": "Lashes",
+          "desc": "Apply half-lashes at the outer corners to lift the eyes."
+        }
+      ],
+      "videoId": "CpW3ZDLc8ZE",
+      "sourceName": "YouTube",
+      "products": [
+        {
+          "name": "Eyeliner",
+          "purchaseLink": "https://shopee.vn/search?keyword=eyeliner"
+        }
+      ]
+    }
+  },
+  {
+    "id": "makeup_011",
+    "name": "Strawberry Makeup",
+    "category": "makeup",
+    "description": "Fresh, red-toned makeup with faux freckles and a glossy finish.",
+    "tags": [
+      "summer",
+      "fresh",
+      "freckles"
+    ],
+    "primaryImage": "https://i.pinimg.com/736x/4e/f7/8a/4ef78acdd52bce3d0f0e41ce48883dd3.jpg",
+    "fallbackImage": "https://i.pinimg.com/736x/4e/f7/8a/4ef78acdd52bce3d0f0e41ce48883dd3.jpg",
+    "tutorial": {
+      "steps": [
+        {
+          "title": "Blush",
+          "desc": "Generously apply red or deep pink cream blush on the cheeks and nose."
+        },
+        {
+          "title": "Freckles",
+          "desc": "Use a brown freckle pen to dot faux freckles over the blush."
+        },
+        {
+          "title": "Lips",
+          "desc": "Apply a shiny strawberry-toned lip gloss."
+        }
+      ],
+      "videoId": "74KK4YyMnJM",
+      "sourceName": "YouTube",
+      "products": [
+        {
+          "name": "Lip Gloss",
+          "purchaseLink": "https://shopee.vn/search?keyword=lip%20gloss"
+        }
+      ]
+    }
+  },
+  {
+    "id": "makeup_012",
+    "name": "Douyin Doll Makeup",
+    "category": "makeup",
+    "description": "Chinese internet-famous makeup focusing on manhua lashes and intense glitter.",
+    "tags": [
+      "douyin",
+      "glitter",
+      "doll"
+    ],
+    "primaryImage": "https://i.pinimg.com/736x/42/95/85/4295859a6667dd1c1a1344e062e0b5de.jpg",
+    "fallbackImage": "https://i.pinimg.com/736x/42/95/85/4295859a6667dd1c1a1344e062e0b5de.jpg",
+    "tutorial": {
+      "steps": [
+        {
+          "title": "Aegyo Sal",
+          "desc": "Highlight the under-eye fat and contour below it to make eyes appear larger."
+        },
+        {
+          "title": "Glitter",
+          "desc": "Apply chunky liquid glitter to the eyelids and inner corners."
+        },
+        {
+          "title": "Lashes",
+          "desc": "Attach spiked 'manhua' style false lashes."
+        }
+      ],
+      "videoId": "U6aOGAkFVZQ",
+      "sourceName": "YouTube",
+      "products": [
+        {
+          "name": "Liquid Glitter",
+          "purchaseLink": "https://shopee.vn/search?keyword=liquid%20glitter"
+        }
+      ]
+    }
+  },
+  {
+    "id": "makeup_013",
+    "name": "90s Grunge Glam",
+    "category": "makeup",
+    "description": "Matte skin, cool-toned brown lips, and smudged eyeliner for a vintage edgy look.",
+    "tags": [
+      "grunge",
+      "90s",
+      "edgy"
+    ],
+    "primaryImage": "https://i.pinimg.com/736x/58/db/34/58db34a90537f2b26f3e323f52caf534.jpg",
+    "fallbackImage": "https://i.pinimg.com/736x/58/db/34/58db34a90537f2b26f3e323f52caf534.jpg",
+    "tutorial": {
+      "steps": [
+        {
+          "title": "Base",
+          "desc": "Use a matte foundation and powder down the entire face."
+        },
+        {
+          "title": "Eyes",
+          "desc": "Smudge a black kohl pencil along the top and bottom lash lines."
+        },
+        {
+          "title": "Lips",
+          "desc": "Line lips with a dark brown pencil and fill with a matte taupe lipstick."
+        }
+      ],
+      "videoId": "dfopdzEBBOw",
+      "sourceName": "YouTube",
+      "products": [
+        {
+          "name": "Brown Lip Liner",
+          "purchaseLink": "https://shopee.vn/search?keyword=brown%20lip%20liner"
         }
       ]
     }
