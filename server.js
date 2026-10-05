@@ -96,8 +96,9 @@ app.post('/api/recommend/skincare', upload.single('image'), async (req, res) => 
     }
 });
 
-// WARDROBE ANALYSIS ENDPOINT
-app.post('/api/analyze/wardrobe', upload.array('images', 10), async (req, res) => {
+
+// WARDROBE ANALYSIS (DB) ENDPOINT
+app.post('/api/analyze/wardrobe-db', upload.array('images', 10), async (req, res) => {
     try {
         if (!req.files || req.files.length === 0) {
             return res.status(400).json({ error: "No clothing items provided." });
@@ -108,8 +109,23 @@ app.post('/api/analyze/wardrobe', upload.array('images', 10), async (req, res) =
             base64Data: file.buffer.toString('base64')
         }));
 
-        console.log(`Analyzing ${images.length} wardrobe items...`);
-        const aiResponse = await aiService.analyzeWardrobe(images);
+        console.log(`Analyzing ${images.length} wardrobe items against DB...`);
+        const aiResponse = await aiService.analyzeWardrobeDb(images);
+
+        console.log("Resolving content...");
+        // resolveBodyContent resolves from OUTFIT_DB
+        
+        const OUTFIT_DB = require('./content/outfitDB');
+        const resolved = aiResponse.recommendations.map(aiItem => {
+            const dbItem = OUTFIT_DB.find(d => d.id === aiItem.id);
+            if (!dbItem) return null;
+            return {
+                ...dbItem,
+                whyItSuitsUser: aiItem.whyItSuitsUser
+            };
+        }).filter(item => item != null);
+        aiResponse.recommendations = resolved;
+
 
         res.json(aiResponse);
     } catch (error) {

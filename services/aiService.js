@@ -225,33 +225,37 @@ CATALOGS:\n${catalogStr}`;
     return await apiKeyManager.executeWithRetry(apiCallFn);
 }
 
-const wardrobeSchema = {
+
+
+const wardrobeDBSchema = {
     type: Type.OBJECT,
     properties: {
-        outfits: {
+        recommendations: {
             type: Type.ARRAY,
             items: {
                 type: Type.OBJECT,
                 properties: {
-                    name: { type: Type.STRING },
-                    description: { type: Type.STRING },
-                    items: { 
-                        type: Type.ARRAY, 
-                        items: { type: Type.STRING, description: "Description of the specific item from the uploaded images used in this outfit." }
-                    }
+                    id: { type: Type.STRING, description: 'Must exactly match an ID from the outfit CATALOG' },
+                    whyItSuitsUser: { type: Type.STRING, description: 'Explain how the user\'s uploaded items fit this outfit.' }
                 },
-                required: ["name", "description", "items"]
+                required: ['id', 'whyItSuitsUser']
             }
         }
     },
-    required: ["outfits"]
+    required: ['recommendations']
 };
 
-async function analyzeWardrobe(images) {
-    const systemInstruction = `You are a fashion stylist. I am providing you with multiple images of my clothing items.
-Mix and match them to create 3-5 stylish outfits.
-For each outfit, provide a catchy name, a description of the style/vibe, and a list of the exact items you used from my uploads.
-Do NOT invent items that are not in the pictures.`;
+async function analyzeWardrobeDb(images) {
+    const catalogStr = 'OUTFIT CATALOG:\n' + buildCatalogString(OUTFIT_DB);
+    const systemInstruction = `You are an expert fashion stylist. The user has uploaded images of their clothing items.
+1. Identify the items the user uploaded (e.g., white shirt, black trousers).
+2. Look at the OUTFIT CATALOG provided below.
+3. Select 3-6 outfits from the catalog that best utilize or match the vibe of the user's uploaded items.
+4. Return the exact IDs of your selected outfits and explain why they fit the user's items.
+DO NOT invent IDs. ONLY use IDs from the catalog.
+
+CATALOGS:
+${catalogStr}`;
 
     const apiCallFn = async (apiKey) => {
         const ai = new GoogleGenAI({ apiKey: apiKey });
@@ -259,7 +263,7 @@ Do NOT invent items that are not in the pictures.`;
         const contents = [{
             role: 'user',
             parts: [
-                { text: "Here are the items in my wardrobe. Mix and match them to create stylish outfits." }
+                { text: 'Here are the images of my wardrobe items. Please recommend outfits from the catalog.' }
             ]
         }];
         
@@ -274,11 +278,12 @@ Do NOT invent items that are not in the pictures.`;
             contents: contents,
             config: {
                 systemInstruction: systemInstruction,
-                responseMimeType: "application/json",
-                responseSchema: wardrobeSchema,
-                temperature: 0.4
+                responseMimeType: 'application/json',
+                responseSchema: wardrobeDBSchema,
+                temperature: 0.6
             }
         });
+        
         return JSON.parse(response.text);
     };
 
@@ -289,5 +294,5 @@ module.exports = {
     analyzeFace,
     analyzeBody,
     recommendSkincare,
-    analyzeWardrobe
+    analyzeWardrobeDb
 };
