@@ -10,7 +10,7 @@ const port = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-// Health check for Railway deployment
+// Health check for deployment
 app.get('/api/explore', (req, res) => {
     const exploreDB = require('./content/exploreDB');
     res.json(exploreDB);
